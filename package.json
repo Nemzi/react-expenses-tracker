@@ -1,6 +1,5 @@
 {
-  "name": "react-projects",
-  "homepage" : "https://nemzi.github.io/react-project",
+  "name": "react-expense-tracker-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
