@@ -1,4 +1,4 @@
-import "./DummyDataButton.css";
+import classes from "./DummyDataButton.module.css";
 
 const DummyDatButton = (props) => {
   // setting up some dummy data
@@ -52,7 +52,7 @@ const DummyDatButton = (props) => {
   };
 
   return (
-    <button className="dummy-button" onClick={generateDummyData}>
+    <button className={classes["dummy-button"]} onClick={generateDummyData}>
       Dummy Data
     </button>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DummyDatButton from "./DummyDataButton";
 
-import "./ExpenseForm.css";
+import classes from "./ExpenseForm.module.css";
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -45,8 +45,8 @@ const ExpenseForm = (props) => {
   return (
     <div>
       <form onSubmit={submitHandler}>
-        <div className="new-expense__controls">
-          <div className="new-expense__control">
+        <div className={classes["new-expense__controls"]}>
+          <div className={classes["new-expense__control"]}>
             <label>Title</label>
             <input
               type="text"
@@ -54,7 +54,7 @@ const ExpenseForm = (props) => {
               onChange={titleChangeHandler}
             />
           </div>
-          <div className="new-expense__control">
+          <div className={classes["new-expense__control"]}>
             <label>Amount</label>
             <input
               type="number"
@@ -64,7 +64,7 @@ const ExpenseForm = (props) => {
               onChange={amountChangeHandler}
             />
           </div>
-          <div className="new-expense__control">
+          <div className={classes["new-expense__control"]}>
             <label>Date</label>
             <input
               type="date"
@@ -75,8 +75,10 @@ const ExpenseForm = (props) => {
             />
           </div>
         </div>
-        <div className="new-expense__actions">
-          <button type="submit">Add Expense</button>
+        <div className={classes["new-expense__actions"]}>
+          <button className={classes["new-expense__button"]} type="submit">
+            Add Expense
+          </button>
         </div>
       </form>
       <DummyDatButton onGenerateDummyData={fillInDummyData} />
@@ -85,16 +87,3 @@ const ExpenseForm = (props) => {
 };
 
 export default ExpenseForm;
-
-// const [userInput, setUserInput] = useState({
-//   enteredTitle: "",
-//   enteredAmount: "",
-//   enteredDate: "",
-// });
-// setUserInput({
-//   ...userInput,
-//   enteredTitle: event.target.value,
-// // }); if depending on previous state it is better to use this arrow function
-// setUserInput((prevState) => {
-//   return { ...prevState, enteredTitle: event.target.value };
-// });
