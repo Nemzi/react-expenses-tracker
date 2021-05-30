@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 
 import DummyDatButton from "./DummyDataButton";
 import Button from "../UI/Button";
@@ -44,7 +44,7 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <div>
+    <Fragment>
       <form onSubmit={submitHandler}>
         <div className={classes["new-expense__controls"]}>
           <div className={classes["new-expense__control"]}>
@@ -59,8 +59,8 @@ const ExpenseForm = (props) => {
             <label>Amount</label>
             <input
               type="number"
-              min="0.01"
-              step="0.01"
+              min="1"
+              step="1"
               value={enteredAmount}
               onChange={amountChangeHandler}
             />
@@ -70,7 +70,7 @@ const ExpenseForm = (props) => {
             <input
               type="date"
               min="2019-01-01"
-              max="2022-12-31"
+              max="2021-12-31"
               value={enteredDate}
               onChange={dateChangeHandler}
             />
@@ -81,7 +81,7 @@ const ExpenseForm = (props) => {
         </div>
       </form>
       <DummyDatButton onGenerateDummyData={fillInDummyData} />
-    </div>
+    </Fragment>
   );
 };
 

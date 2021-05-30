@@ -7,14 +7,18 @@ import classes from "./NewExpense.module.css";
 
 const NewExpense = (props) => {
   const [isEditing, setIsEditing] = useState(false);
+  let [currentId, setNewId] = useState(4);
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.random().toString(),
+      id: currentId,
     };
 
     props.onAddExpense(expenseData);
+    setNewId((prevId) => {
+      return currentId + 1;
+    });
     setIsEditing(false);
   };
 
