@@ -1,6 +1,7 @@
 import { useState } from "react";
-import DummyDatButton from "./DummyDataButton";
 
+import DummyDatButton from "./DummyDataButton";
+import Button from "../UI/Button";
 import classes from "./ExpenseForm.module.css";
 
 const ExpenseForm = (props) => {
@@ -76,9 +77,7 @@ const ExpenseForm = (props) => {
           </div>
         </div>
         <div className={classes["new-expense__actions"]}>
-          <button className={classes["new-expense__button"]} type="submit">
-            Add Expense
-          </button>
+          <Button type="submit">Add Expense</Button>
         </div>
       </form>
       <DummyDatButton onGenerateDummyData={fillInDummyData} />

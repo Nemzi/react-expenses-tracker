@@ -7,19 +7,19 @@ const DUMMY_EXPENSES = [
   {
     id: "0",
     title: "Toilet Paper",
-    amount: 94.12,
+    amount: 94,
     date: new Date(2020, 7, 14),
   },
   {
     id: "1",
     title: "New TV",
-    amount: 799.49,
+    amount: 799,
     date: new Date(2021, 2, 12),
   },
   {
     id: "2",
     title: "Car Insurance",
-    amount: 294.67,
+    amount: 294,
     date: new Date(2021, 2, 28),
   },
   {
