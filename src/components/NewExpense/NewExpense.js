@@ -31,7 +31,11 @@ const NewExpense = (props) => {
   };
 
   return (
-    <Card className={classes["new-expense"]}>
+    <Card
+      className={`${classes["new-expense"]} ${
+        isEditing ? classes["card-appears"] : ""
+      }`}
+    >
       {!isEditing && (
         <Button onClick={startEditingHandler}>Add new expense</Button>
       )}

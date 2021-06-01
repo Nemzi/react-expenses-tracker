@@ -10,5 +10,12 @@ html {
 
 body {
   margin: 0;
-  background-color: #4b4b4b;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgb(10, 16, 45) 20%,
+    rgb(10, 16, 45) 80%,
+    rgb(255, 255, 255) 100%
+  );
 }

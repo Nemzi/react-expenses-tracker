@@ -17,14 +17,24 @@ const Expenses = (props) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
+  const allExpenses = props.items;
+
   return (
     <Card className={classes.expenses}>
       <ExpenseFilter
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      <ExpensesChart expenses={filteredExpenses} />
-      <ExpensesList items={filteredExpenses} />
+      <ExpensesChart
+        expenses={filteredExpenses}
+        allExpenses={allExpenses}
+        year={filteredYear}
+      />
+      <ExpensesList
+        items={filteredExpenses}
+        showAllExpenses={allExpenses}
+        year={filteredYear}
+      />
     </Card>
   );
 };

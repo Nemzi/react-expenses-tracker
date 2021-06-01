@@ -17,9 +17,10 @@
   font: inherit;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid black;
   width: 350px;
   max-width: 100%;
+  outline: none;
 }
 
 .new-expense__actions {

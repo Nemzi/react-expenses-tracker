@@ -6,3 +6,17 @@
   max-width: 90%;
   text-align: center;
 }
+
+.card-appears {
+  animation: card-appears 1s ease-out forwards;
+}
+
+@keyframes card-appears {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
