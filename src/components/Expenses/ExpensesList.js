@@ -2,7 +2,7 @@ import ExpenseItem from "./ExpenseItem";
 import classes from "./ExpensesList.module.css";
 
 const ExpensesList = (props) => {
-  if (props.year === "All") {
+  if (props.value === "All") {
     return (
       <ul className={classes["expenses-list"]}>
         {props.showAllExpenses.map((expense) => (
